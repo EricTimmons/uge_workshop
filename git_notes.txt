@@ -1,0 +1,3 @@
+Creating a new notes file for GIT.
+
+This is fun. I think we are going to talk about forks soon. It seems like that is where the conversation is going.
