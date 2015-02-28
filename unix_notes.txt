@@ -34,24 +34,3 @@ ls -lt
 ls -l
 ls -t
 cd /
-which uname
-echo $PATH 
-echo $EDITOR 
-subl ~/.config/fish/config.fish
-ls -G
-git --version
-uname
-curl -fsSL http://git.io/QxUaOQ | sh
-curl -fsSL http://git.io/7UHtNA | sh
-git config --global user.email 'timmoeri000@yahoo.com'
-git config --global user.name 'Eric Timmons'
-brew install git
-subl /etc/paths
-set -gx EDITOR 'subl -w'
-# Sublime Text
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-brew info fish
-fish_update_completions
-curl -fsSL http://git.io/beJs | ruby
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)"
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)
