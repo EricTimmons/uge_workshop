@@ -1,3 +1,5 @@
 Creating a new notes file for GIT.
 
 This is fun. I think we are going to talk about forks soon. It seems like that is where the conversation is going.
+
+we are adding something to this file so that we can make a new commit. Branching is most definitely getting easier.
