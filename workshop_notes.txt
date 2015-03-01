@@ -3,70 +3,99 @@ Workshop notes
 Unix Servers most servers run a unix OS.
 When compared to other OS unix is more stable and faster, compatible with internet tech, and in most cases free.
 This is also why app devs choose unix.
+
 Unix
+
 computer OS that is multi process, multi user.
 developed by Ken Thompson Dennis Ritchie, from at&t bell lab.
 Unix was released in 1973
 there are platform specific quirks.
 Darwin OSX and iOS.
 Linux Android.
+
 4 common traits between all forms of unix
+
 Stored in human readable plain text files
 Nested Subdirectories. (folders) Directories.
 Many small programs.
 Input-output redirection. ( the programs input can come from another place other than the key board and output to someplace besides the screen.) With unix it is easy to have the system dump logs to a screen or a file.
 These concepts make up the UNIX philosophy. (at code fellows we will create programs and use programs that adhere to that philosophy.)
+
 UNIX Kernel
+
 just a program. Has one special job - manages the hardware.
 kernel is sandwiched in between other programs on top and CPU, RAM, and DEVICES on the bottom.
 The kernel is safe from hackers. It runs in a protected part of the computers memory.
+
 UNIX Shell
+
 Another program that has a very special job. It provides a user interface to the kernel.
 the OG UI wa the command line interpreter.
 modern UNIX systems adopted GUI. as well as Multi touch user interface, as well as audible user interfaces.
 At Code Fellows shell is the code line variety.
 the shell is like a turtle shell.
 There are some consequences if the user has direct access to the kernel. Data corruption computer crashes etc.
+
 $ represents the PROMPT symbol
+
 read evaluate print loop (REPL)
+
 COMMAND: pwd (print working directory)
 this prints (displays) the directory you are currently working in.
 allows you to see all components of your working directory.
+
 CONCEPT: The Path
 in any computer a path represents a location in the filesystem. paths are like addresses, listing a location fromt he general to the specific.
 A path is absolute when it starts with a /
 a relative path does not start with a slash.
+
 Moving around
+
 COMMAND: cd (change directory)
 cd command allows you to change directories.
 what happens when you indicate where you want to go?
+
 To the Root
+
 Home directory is /Home/erictimmons
 The root directory is the highest directory. you cannot go any higher than the root.
 generally restricted to admin users only.
+
 COMMAND: ls (list)
+
 adding flags to commands tweaks the results
 -t flag will show the most recently modified items.
 -l flag shows things in long form.
 -r flag can reverse the order.
 flags can be put together with one - (ex. -ltr)
+
 COMMAND: man (manual)
+
 short for manual
 type man then the command you want to list the flags for to find all the flags available.
 Pagers allow you to scroll through. Hitting the q key can close this and take you back to the terminal
-IMPORTANT: Control C will save you from an infinite loop or a broken program.
+
+IMPORTANT: Control C will save you from an infinite loop or a
+broken program.
+
 Paths need to be set up like strings. Each character is like a bead on the string.
 Escape characters are used before a space to help a path continue. Use a \ or place the entire path inside quotes.
+
 Naming conventions.
+
 Most UNIX users use dashes and underscores to separate works in names.
 Case sensitivities capitals and lowercase represent different values.
 to avoid a conflict of interest over cross platform developers use lower case, and underscores to represent spaces.
+
 When to use a relative path.
+
 use these when you want to move relative to where you already are.
 Once you have gone through multiple relative paths how do you up up through the paths?
 use the “cd ..” the .. command is a symbol to represent the directory above where you are at currently. if you want to go up multiple directories use ../.. etc depending on how many directories you want to move through.
 Also using the tab key can help you quick list the directories inside of the directory you are in.
+
 IMPORTANT: Key commands that will be helpful in fish.
+
 Tab completes the current token.
 Home or Ctrl-A moves the cursor to the beginning of the line.
 End or Ctrl-E moves to the end of line. If the cursor is already at the end of the line, and an autosuggestion is available, End or Ctrl-E accepts the autosuggestion.
@@ -97,6 +126,7 @@ Naming conventions lower case and no spaces
 Second Half of Class
 
 Making, moving, and modifying files.
+
 the pipe command ( | ) takes the output from a primary command and inputs it into another command.
 chaining is the act of using many pipes to combine commands
 > overwrites >> appends.
@@ -105,44 +135,62 @@ COMMAND: mv (the move command)
 can be used to move files.
 can also be used to rename files if you move a file with a new name.
 ex. mv uge_workshop/moving_around.txt uge_workshop/unix_notes.txt
+
 Repositories
+
 such as GIT
 to remove a .git directory type rm -rf .git
 git init ( initializes .git directory folder)
+
 What the hell git is talking about
+
 when creating a git directory you create a box. (using git init)
 if you see a red x it means that something isn’t quite right. it’s “dirty” or in a a questionable state.
 use git status to find out what is causing the red x
 after finding the file you want to move into the git directory use git add to add the file to the stage.
 dif or changes
+
 The 5 pieces of a GIT commit are:
+
 message
 ID
 timestamp
 changes
 signature
+
 git status shows the staging area.
 git log shows the history of the commits.
 git is basically a hidden directory. the things inside of the directory do not need to mess with.
+
 COMMAND: ls -a shows hidden files.
+
 MODIFY, ADD, COMMIT ( THIS IS YOUR LIFEBLOOD )
+
 Modify/change the file and SAVE!
 Add it to the staging area once you have saved the changes.
 Commit the changes w/ a message. Let yourself/partners know your intentions with your message.
+
 Labels
+
 Labels point to commits
 Commits have previous history.
 you switch to different branches with the git checkout command.
 COMMAND: git checkout <branch name>
 COMMAND: git branch <name> to create a new branch.
+
 Branches
+
 help you work in isolation. Branches allow you to make changes to the master branch without actually changing it.
 allows you to work on bugs in isolation from the master branch.
 branches can be merged after bugs are fixed.
+
 When pushing .git to github.
+
 git push -u origin master
 once this command is pushed you don’t need to specify origin or master
+
 Deleting a branch git branch -d <name>
 Pulling a branch from github.com use: git pull
 github.com
+
 Pull requests are a github thing.
